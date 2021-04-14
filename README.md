@@ -14,7 +14,7 @@ The following are the attributes for the widget
 
 The following are the attributes for the brand
 * name
-* last_sold -- date when the widget was last sold
+* lastSoldAt -- date when the widget was last sold, should update if widget quantity decreases
 
 # Required REST Capabilities 
 
