@@ -1,24 +1,24 @@
 # Assignment Overview
-Create an Express based REST API for a Widget Store.  The widget store has 1 or more widgets and each widget has a single brand. A brand can have multiple widgets. 
+Create an Express based REST API for a Widget Store. Each widget has a single brand. A brand can have multiple widgets.
 
 # The Models
 
 ## Widget
 
 The following are the attributes for the widget
-* name
-* quantity
-* brand
+* name {string}, max length 256 characters
+* quantity {integer}, number of widgets available
+* brandId {uuid}, foreign key for brand 
 
 ## Brand
 
 The following are the attributes for the brand
-* name
-* lastSoldAt -- date when the widget was last sold, should update if widget quantity decreases
+* name {string}, max length 256 characters
+* lastSoldAt {date}, date when the widget was last sold, should update if widget quantity decreases
 
 # Required REST Capabilities 
 
-The store should support the following capabilities:
+The REST API should support the following capabilities:
 
 1. Create a widget
 1. List all widgets
