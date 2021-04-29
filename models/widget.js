@@ -11,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Widget.hasOne(models.Brand, {
-        foreignKey: 'brandId'
-      });
+      Widget.belongsTo(models.Brand, { foreignKey: 'brandId' });
     }
   };
   Widget.init({
@@ -26,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     quantity: DataTypes.INTEGER,
     name: DataTypes.STRING,
+    brandId: DataTypes.UUID
   }, {
     sequelize,
     modelName: 'Widget',
