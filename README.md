@@ -68,3 +68,45 @@ https://sequelize.org/master/
 
 sequelize-cli 
 
+# SQlLite CLI Tool
+
+We've provided precompiled 32 binaries for Linux, macos, and windows if you want to use the sqlite3 command line interface to view data in the database.  
+
+The following commands assume they are being run from the project's root folder.
+
+## Window Example
+
+```
+.\cli\win32\sqlite3.exe .\db\inventory.sqlite
+```
+
+## macos Example
+
+```
+./cli/macos/sqlite3 ./db/inventory.sqlite
+```
+
+## Linux Example
+```
+./cli/linux-x86/sqlite3 ./db/inventory.sqlite
+```
+
+> Note that you will need support for 32 bit binaries on Linux which requires installing the following library:
+
+> ctrl-d will exit the cli tool
+
+### RHEL/CentOS 7
+
+```
+sudo yum install glibc.i686
+```
+
+### Ubuntu 
+
+```
+sudo apt-get install ia32-libs
+```
+
+
+
+
